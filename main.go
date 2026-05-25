@@ -25,6 +25,7 @@ func main() {
 	case 2:
 		tampilJadwal()
 	case 3:
+		editJadwal()
 	case 4:
 	case 5:
 	case 6:
@@ -129,5 +130,29 @@ func tampilJadwal() {
 		fmt.Println("Jam Mulai   :", dataJadwal[i].jamMulai)
 		fmt.Println("Jam Selesai :", dataJadwal[i].jamSelesai)
 		fmt.Println("Ruangan     :", dataJadwal[i].ruangan)
+	}
+}
+
+func editJadwal() {
+	var kode string
+	var idx int
+
+	fmt.Print("Masukkan kode MK: ")
+	fmt.Scan(&kode)
+
+	idx = sequentialSearchKode(kode)
+
+	if idx != -1 {
+
+		fmt.Print("Nama MK Baru : ")
+		fmt.Scan(&dataJadwal[idx].namaMK)
+
+		fmt.Print("Dosen Baru : ")
+		fmt.Scan(&dataJadwal[idx].dosen)
+
+		fmt.Println("Data berhasil diubah")
+
+	} else {
+		fmt.Println("Data tidak ditemukan")
 	}
 }
