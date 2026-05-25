@@ -35,10 +35,6 @@ func main() {
 
 }
 
-package main
-
-import "fmt"
-
 type Jadwal struct {
 	kodeMK     string
 	namaMK     string
