@@ -82,3 +82,19 @@ func cekBentrok(j Jadwal) bool {
 
 	return false
 }
+
+func tampilJadwal() {
+	var i int
+
+	for i = 0; i < jumlahData; i++ {
+
+		fmt.Println("----------------------")
+		fmt.Println("Kode MK     :", dataJadwal[i].kodeMK)
+		fmt.Println("Nama MK     :", dataJadwal[i].namaMK)
+		fmt.Println("Dosen       :", dataJadwal[i].dosen)
+		fmt.Println("Hari        :", dataJadwal[i].hari)
+		fmt.Println("Jam Mulai   :", dataJadwal[i].jamMulai)
+		fmt.Println("Jam Selesai :", dataJadwal[i].jamSelesai)
+		fmt.Println("Ruangan     :", dataJadwal[i].ruangan)
+	}
+}
