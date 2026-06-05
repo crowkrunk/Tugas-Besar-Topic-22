@@ -27,6 +27,7 @@ func main() {
 	case 3:
 		editJadwal()
 	case 4:
+		hapusjadwal()
 	case 5:
 	case 6:
 	case 7:
