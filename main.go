@@ -180,22 +180,3 @@ func hapusJadwal() {
 		fmt.Println("Data tidak ditemukan")
 	}
 }
-
-func cekBentrok(j Jadwal) bool {
-	var i int
-
-	for i = 0; i < jumlahData; i++ {
-
-		if dataJadwal[i].hari == j.hari &&
-			dataJadwal[i].ruangan == j.ruangan {
-
-			if j.jamMulai < dataJadwal[i].jamSelesai &&
-				j.jamSelesai > dataJadwal[i].jamMulai {
-
-				return true
-			}
-		}
-	}
-
-	return false
-}
