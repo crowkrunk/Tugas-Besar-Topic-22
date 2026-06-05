@@ -29,7 +29,9 @@ func main() {
 	case 4:
 		hapusjadwal()
 	case 5:
+		 menucari()
 	case 6:
+		menuSorting()
 	case 7:
 	case 8:
 	}
@@ -220,7 +222,7 @@ func binarySearchKode(kode string) int {
 }
 
 
-func menuCari() {
+func menucari() {
 	var pilih int
 	var key string
 	var idx int
