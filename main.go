@@ -18,25 +18,26 @@ func main() {
 		fmt.Println("8. Keluar")
 		fmt.Print("Pilih menu : ")
 		fmt.Scan(&pilih)
-	}
-	switch pilih {
-	case 1:
-		tambahJadwal()
-	case 2:
-		tampilJadwal()
-	case 3:
-		editJadwal()
-	case 4:
-		hapusjadwal()
-	case 5:
-		 menucari()
-	case 6:
-		menuSorting()
-	case 7:
-	case 8:
-	}
-	fmt.Println("Program selesai")
 
+		switch pilih {
+		case 1:
+			tambahJadwal()
+		case 2:
+			tampilJadwal()
+		case 3:
+			editJadwal()
+		case 4:
+			hapusJadwal()
+		case 5:
+			menucari()
+		case 6:
+			menuSorting()
+		case 7:
+		case 8:
+		}
+		fmt.Println("Program selesai")
+
+	}
 }
 
 type Jadwal struct {
@@ -220,7 +221,6 @@ func binarySearchKode(kode string) int {
 
 	return -1
 }
-
 
 func menucari() {
 	var pilih int
