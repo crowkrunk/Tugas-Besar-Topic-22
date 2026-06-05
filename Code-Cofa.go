@@ -98,3 +98,82 @@ func tampilJadwal() {
 		fmt.Println("Ruangan     :", dataJadwal[i].ruangan)
 	}
 }
+
+func sequentialSearchNama(nama string) int {
+	var i int
+
+	for i = 0; i < jumlahData; i++ {
+
+		if dataJadwal[i].namaMK == nama {
+			return i
+		}
+	}
+
+	return -1
+}
+
+func binarySearchKode(kode string) int {
+	var left, right, mid int
+
+	left = 0
+	right = jumlahData - 1
+
+	for left <= right {
+
+		mid = (left + right) / 2
+
+		if dataJadwal[mid].kodeMK == kode {
+			return mid
+		}
+
+		if dataJadwal[mid].kodeMK < kode {
+			left = mid + 1
+		} else {
+			right = mid - 1
+		}
+	}
+
+	return -1
+}
+
+
+func menuCari() {
+	var pilih int
+	var key string
+	var idx int
+
+	fmt.Println("1. Sequential Search")
+	fmt.Println("2. Binary Search")
+	fmt.Print("Pilih : ")
+	fmt.Scan(&pilih)
+
+	if pilih == 1 {
+
+		fmt.Print("Nama MK : ")
+		fmt.Scan(&key)
+
+		idx = sequentialSearchNama(key)
+
+		if idx != -1 {
+			fmt.Println("Data ditemukan")
+			fmt.Println(dataJadwal[idx])
+		} else {
+			fmt.Println("Data tidak ditemukan")
+		}
+
+	} else if pilih == 2 {
+
+		fmt.Print("Kode MK : ")
+		fmt.Scan(&key)
+
+		idx = binarySearchKode(key)
+
+		if idx != -1 {
+			fmt.Println("Data ditemukan")
+			fmt.Println(dataJadwal[idx])
+		} else {
+			fmt.Println("Data tidak ditemukan")
+		}
+	}
+}
+
