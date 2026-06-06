@@ -110,4 +110,28 @@ func main() {
 			fmt.Println("Program selesai")
 		}
 	}
+} 
+
+func hapusJadwal() {
+	var kode string
+	var idx, i int
+
+	fmt.Print("Masukkan kode MK: ")
+	fmt.Scan(&kode)
+
+	idx = sequentialSearchKode(kode)
+
+	if idx != -1 {
+
+		for i = idx; i < jumlahData-1; i++ {
+			dataJadwal[i] = dataJadwal[i+1]
+		}
+
+		jumlahData--
+
+		fmt.Println("Data berhasil dihapus")
+
+	} else {
+		fmt.Println("Data tidak ditemukan")
+	}
 }
