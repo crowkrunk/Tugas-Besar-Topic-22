@@ -26,10 +26,6 @@ func editJadwal() {
 	}
 }
 
-package main
-
-import "fmt"
-
 func selectionSortAsc() {
 	var i, j, idxMin int
 	var temp Jadwal
