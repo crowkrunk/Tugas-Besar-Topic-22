@@ -33,6 +33,7 @@ func main() {
 		case 6:
 			menuSorting()
 		case 7:
+			statistik()
 		case 8:
 		}
 		fmt.Println("Program selesai")
