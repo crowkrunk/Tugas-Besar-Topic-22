@@ -108,14 +108,11 @@ func cekBentrok(j Jadwal) bool {
 
 		if dataJadwal[i].hari == j.hari {
 
-			if dataJadwal[i].ruangan == j.ruangan {
-
 				if j.jamMulai < dataJadwal[i].jamSelesai &&
 					j.jamSelesai > dataJadwal[i].jamMulai {
 
 					return true
 				}
-			}
 		}
 	}
 
